@@ -15,7 +15,11 @@ repositories {
     }
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
-    compile 'com.github.swapUniba:crowd-pulse-pos-tag:0.0.1'
+    compile 'com.github.swapUniba:crowd-pulse-pos-tag:master-SNAPSHOT'
     compile group: 'org.apache.opennlp', name: 'opennlp-tools', version: '1.5.3'
 }
